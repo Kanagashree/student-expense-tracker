@@ -1,0 +1,231 @@
+.home-container {
+    min-height: 100vh;
+    background: #f6f7fb;
+    padding: 30px 50px;
+    box-sizing: border-box;
+}
+
+.header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #202124;
+}
+
+.header p {
+    margin-top: 7px;
+    color: #777;
+    font-size: 14px;
+}
+
+.header button {
+    background: #6c63ff;
+    color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.header button:hover {
+    background: #574fd6;
+}
+
+.dashboard {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.total-card {
+    grid-column: 1 / 3;
+    background: linear-gradient(135deg, #6c63ff, #8b83ff);
+    color: white;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.2);
+}
+
+.total-card p {
+    margin: 6px 0;
+    opacity: 0.9;
+}
+
+.total-card h2 {
+    font-size: 38px;
+    margin: 10px 0 20px;
+}
+
+.form-card,
+.expense-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.form-card h2,
+.expense-card h2 {
+    margin-top: 0;
+    color: #252525;
+}
+
+.form-card input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    margin: 12px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    background: #fafafa;
+}
+
+.form-card input:focus {
+    border-color: #6c63ff;
+    background: white;
+}
+
+.form-card button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 10px;
+    background: #6c63ff;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.form-card button:hover {
+    background: #574fd6;
+}
+
+.expense-card input[type="month"] {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.expense-card button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 9px;
+    background: #eeeefe;
+    color: #5d55d9;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.expense-card button:hover {
+    background: #dedcff;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.expense-item:last-child {
+    border-bottom: none;
+}
+
+.expense-item strong {
+    color: #222;
+    font-size: 15px;
+}
+
+.expense-item p {
+    margin: 5px 0;
+    color: #888;
+    font-size: 13px;
+}
+
+.expense-item > div:last-child {
+    text-align: right;
+}
+
+.expense-item > div:last-child strong {
+    display: block;
+    color: #6c63ff;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.expense-item button {
+    margin-left: 6px;
+    padding: 7px 12px;
+    font-size: 12px;
+}
+
+.expense-item button:first-of-type {
+    background: #eeeefe;
+    color: #5d55d9;
+}
+
+.expense-item button:last-of-type {
+    background: #ffe9e9;
+    color: #e05252;
+}
+
+.expense-item button:last-of-type:hover {
+    background: #ffdada;
+}
+
+@media (max-width: 800px) {
+    .home-container {
+        padding: 20px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .total-card {
+        grid-column: 1;
+    }
+
+    .header {
+        align-items: flex-start;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header button {
+        width: 100%;
+    }
+
+    .expense-item {
+        align-items: flex-start;
+    }
+}
